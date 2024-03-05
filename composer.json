@@ -1,0 +1,21 @@
+{
+    "name": "spip-remix/sdk",
+    "description": "SPIPRemix Development Kit",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "JamesRezo",
+            "email": "james@rezo.net"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "symfony/console": "6.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SpipRemix\\Sdk\\": "src/"
+        }
+    }
+}
