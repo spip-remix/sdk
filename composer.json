@@ -31,7 +31,7 @@
         "psr-4": {
             "SpipRemix\\Sdk\\": "src/"
         },
-        "files": ["tests/stub.php"]
+        "files": ["src/stub.php"]
     },
     "config": {
         "platform": {
