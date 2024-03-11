@@ -10,16 +10,28 @@ class Cache implements CacheInterface
 {
     public function get(string $key, mixed $default = null): mixed
     {
+        if ($key == 'test') {
+            return 'stub';
+        }
+
         return $default;
     }
 
     public function set(string $key, mixed $value, \DateInterval|int|null $ttl = null): bool
     {
+        if ($key == 'test') {
+            return false;
+        }
+
         return true;
     }
 
     public function delete(string $key): bool
     {
+        if ($key == 'test') {
+            return false;
+        }
+
         return true;
     }
 
@@ -45,6 +57,10 @@ class Cache implements CacheInterface
 
     public function has(string $key): bool
     {
-        return true;
+        if ($key == 'test') {
+            return true;
+        }
+
+        return false;
     }
 }
