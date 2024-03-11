@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-use SpipRemix\Sdk\Stub\Cache;
+use SpipRemix\Sdk\Stub\CacheStub;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$c = new Cache;
+$c = new CacheStub;
 
 dump($c->get('test'), $c->get('test', 'valeur'));
 dump($c->delete('test'));

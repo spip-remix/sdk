@@ -6,7 +6,7 @@ namespace SpipRemix\Sdk\Stub;
 
 use Psr\SimpleCache\CacheInterface;
 
-class Cache implements CacheInterface
+class CacheStub implements CacheInterface
 {
     public function get(string $key, mixed $default = null): mixed
     {
@@ -42,7 +42,17 @@ class Cache implements CacheInterface
 
     public function getMultiple(\Traversable|array $keys, mixed $default = null): \Traversable|array
     {
-        return $default;
+        $return = [];
+
+        foreach ($keys as $key) {
+            if ($key == 'test') {
+                $return['test'] = 'stub';
+            } else {
+                $return[$key] = $default;
+            }
+        }
+
+        return $return;
     }
 
     public function setMultiple(\Traversable|array $values, \DateInterval|int|null $ttl = null): bool

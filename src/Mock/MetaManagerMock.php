@@ -10,9 +10,7 @@ use SpipRemix\Contracts\MetaManagerInterface;
 use SpipRemix\Contracts\MetaManagerTrait;
 
 /**
- * Undocumented class.
- *
- * @api
+ * Faux MetaManager.
  *
  * @author JamesRezo <james@rezo.net>
  */
