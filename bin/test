@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+use SpipRemix\Sdk\Stub\Cache;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+$c = new Cache;
+
+dump($c->get('test'), $c->get('test', 'valeur'));
+dump($c->delete('test'));
+dump($c->set('test', 'coucou'));
+dump($c->get('test'), $c->get('test', 'valeur'));
