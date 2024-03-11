@@ -24,13 +24,14 @@
     "repositories": {
         "contracts": {
             "type": "git",
-            "url": "/Users/j.hautot/Sites/my-tests/spip-remix/contracts"
+            "url": "/Users/klike/Sites/spip-remix/contracts"
         }
     },
     "autoload": {
         "psr-4": {
             "SpipRemix\\Sdk\\": "src/"
-        }
+        },
+        "files": ["tests/stub.php"]
     },
     "config": {
         "platform": {
