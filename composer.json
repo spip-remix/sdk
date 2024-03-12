@@ -17,9 +17,11 @@
         "phpunit/phpunit": "^10.5",
         "psr/log": "^3.0",
         "psr/simple-cache": "^3.0",
-        "spip-remix/contracts": "^0.1.x-dev",
         "symfony/console": "^6.4",
         "symfony/var-dumper": "^6.4"
+    },
+    "require-dev": {
+        "spip-remix/contracts": "^0.1.x-dev"
     },
     "repositories": {
         "contracts": {
