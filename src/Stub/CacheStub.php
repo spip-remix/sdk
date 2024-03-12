@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SpipRemix\Sdk\Stub;
+namespace SpipRemix\Component\Sdk\Stub;
 
 use Psr\SimpleCache\CacheInterface;
 

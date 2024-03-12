@@ -1,6 +1,6 @@
 {
     "name": "spip-remix/sdk",
-    "description": "SPIPRemix Development Kit",
+    "description": "SPIP Development Kit",
     "license": "MIT",
     "type": "library",
     "keywords": [
@@ -17,21 +17,14 @@
         "phpunit/phpunit": "^10.5",
         "psr/log": "^3.0",
         "psr/simple-cache": "^3.0",
-        "symfony/console": "^6.4",
         "symfony/var-dumper": "^6.4"
     },
     "require-dev": {
         "spip-remix/contracts": "^0.1.x-dev"
     },
-    "repositories": {
-        "contracts": {
-            "type": "git",
-            "url": "/Users/klike/Sites/spip-remix/contracts"
-        }
-    },
     "autoload": {
         "psr-4": {
-            "SpipRemix\\Sdk\\": "src/"
+            "SpipRemix\\Component\\Sdk\\": "src/"
         },
         "files": ["src/stub.php"]
     },

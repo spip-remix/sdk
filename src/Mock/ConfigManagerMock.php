@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace SpipRemix\Sdk\Mock;
+namespace SpipRemix\Component\Sdk\Mock;
 
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
 use SpipRemix\Contracts\ConfigManagerInterface;
+use SpipRemix\Contracts\MetaManagerInterface;
 
 /**
  * Undocumented class.
@@ -18,37 +19,32 @@ class ConfigManagerMock implements ConfigManagerInterface, LoggerAwareInterface
     use LoggerAwareTrait;
 
     public function __construct(
-        /** @var array<string,mixed> $config */
-        private array $config = []
+       private MetaManagerInterface $config,
     ) {
     }
 
     public function all(): array
     {
-        return $this->config;
+        return $this->config->all();
     }
 
     public function get(string $name, mixed $default = null): mixed
     {
-        if (array_key_exists($name, $this->config)) {
-            return $this->config[$name];
-        }
-
-        return $default;
+        return $this->config->get($name, $default);
     }
 
     public function set(string $name, mixed $value = null, bool $importable = false): void
     {
-        $this->config[$name] = $value;
+        $this->config->set($name, $value, $importable);
     }
 
     public function clear(): void
     {
-        $this->config = [];
+        $this->config->clear();
     }
 
     public function unset(string $name): void
     {
-        unset($this->config[$name]);
+        $this->config->unset($name);
     }
 }

@@ -1,7 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-use SpipRemix\Sdk\Stub\CacheStub;
+use SpipRemix\Component\Sdk\Mock\ConfigManagerMock;
+use SpipRemix\Component\Sdk\Mock\MetaManagerMock;
+use SpipRemix\Component\Sdk\Stub\CacheStub;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -11,3 +13,17 @@ dump($c->get('test'), $c->get('test', 'valeur'));
 dump($c->delete('test'));
 dump($c->set('test', 'coucou'));
 dump($c->get('test'), $c->get('test', 'valeur'));
+
+$metas = new MetaManagerMock();
+
+dump($metas->all());
+dump($metas->set('charset', 'utf-8', true));
+dump($metas->all());
+dump($metas->get('charset'));
+dump(serialize($metas->all()));
+
+$config = new ConfigManagerMock($metas);
+
+dump($config->get('charset'));
+dump($config->set('adresse_site', 'https://www.spip.net/'));
+dump($metas->get('adresse_site'));

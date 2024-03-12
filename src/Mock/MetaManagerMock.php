@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SpipRemix\Sdk\Mock;
+namespace SpipRemix\Component\Sdk\Mock;
 
 use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
