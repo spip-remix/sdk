@@ -14,8 +14,7 @@ use SpipRemix\Contracts\MetaManagerTrait;
  *
  * @author JamesRezo <james@rezo.net>
  */
-class MetaManagerMock implements MetaManagerInterface, LoggerAwareInterface
+class MetaManagerMock implements MetaManagerInterface
 {
-    use LoggerAwareTrait;
     use MetaManagerTrait;
 }

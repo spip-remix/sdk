@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace SpipRemix\Component\Sdk\Mock;
 
-use Psr\Log\LoggerAwareInterface;
 use Psr\Log\LoggerAwareTrait;
+use Psr\Log\LoggerInterface;
 use SpipRemix\Contracts\ConfigManagerInterface;
 use SpipRemix\Contracts\MetaManagerInterface;
 
@@ -14,13 +14,18 @@ use SpipRemix\Contracts\MetaManagerInterface;
  *
  * @author JamesRezo <james@rezo.net>
  */
-class ConfigManagerMock implements ConfigManagerInterface, LoggerAwareInterface
+class ConfigManagerMock implements ConfigManagerInterface
 {
     use LoggerAwareTrait;
 
     public function __construct(
        private MetaManagerInterface $config,
     ) {
+    }
+
+    public function getLogger(): ?LoggerInterface
+    {
+        return $this->logger;
     }
 
     public function all(): array
