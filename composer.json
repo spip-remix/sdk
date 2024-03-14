@@ -17,16 +17,26 @@
         "phpunit/phpunit": "^10.5",
         "psr/log": "^3.0",
         "psr/simple-cache": "^3.0",
-        "symfony/var-dumper": "^6.4"
+        "symfony/var-dumper": "^6.4",
+        "psr/clock": "^1.0"
     },
     "require-dev": {
-        "spip-remix/contracts": "^0.1.x-dev"
+        "spip-remix/contracts": "^0.1.x-dev",
+        "spip/filesystem": "^1.2.x-dev"
+    },
+    "repositories": {
+        "spip": {
+            "type": "composer",
+            "url": "https://get.spip.net/composer/"
+        }
     },
     "autoload": {
         "psr-4": {
             "SpipRemix\\Component\\Sdk\\": "src/"
         },
-        "files": ["src/stub.php"]
+        "files": [
+            "src/stub.php"
+        ]
     },
     "config": {
         "platform": {

@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace SpipRemix\Component\Sdk\Mock;
 
-use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
 use SpipRemix\Contracts\MetaManagerInterface;
-use SpipRemix\Contracts\MetaManagerTrait;
+use SpipRemix\Polyfill\Meta\MetaManagerTrait;
 
 /**
  * Faux MetaManager.
@@ -17,4 +15,8 @@ use SpipRemix\Contracts\MetaManagerTrait;
 class MetaManagerMock implements MetaManagerInterface
 {
     use MetaManagerTrait;
+
+    public function boot(): void
+    {
+    }
 }

@@ -19,10 +19,14 @@ class ConfigManagerMock implements ConfigManagerInterface
     use LoggerAwareTrait;
 
     public function __construct(
-       private MetaManagerInterface $config,
+        private MetaManagerInterface $config,
     ) {
     }
 
+    public function boot(): void
+    {
+    }
+    
     public function getLogger(): ?LoggerInterface
     {
         return $this->logger;
