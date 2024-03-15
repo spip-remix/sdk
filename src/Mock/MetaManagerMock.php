@@ -16,7 +16,5 @@ class MetaManagerMock implements MetaManagerInterface
 {
     use MetaManagerTrait;
 
-    public function boot(): void
-    {
-    }
+    public function boot(): void {}
 }

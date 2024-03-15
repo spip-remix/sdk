@@ -20,13 +20,10 @@ class ConfigManagerMock implements ConfigManagerInterface
 
     public function __construct(
         private MetaManagerInterface $config,
-    ) {
-    }
+    ) {}
 
-    public function boot(): void
-    {
-    }
-    
+    public function boot(): void {}
+
     public function getLogger(): ?LoggerInterface
     {
         return $this->logger;

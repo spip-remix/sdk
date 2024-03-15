@@ -55,6 +55,9 @@ class CacheStub implements CacheInterface
         return $return;
     }
 
+    /**
+     * @param iterable<mixed>|array<mixed> $values
+     */
     public function setMultiple(\Traversable|array $values, \DateInterval|int|null $ttl = null): bool
     {
         return true;
