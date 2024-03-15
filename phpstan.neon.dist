@@ -1,0 +1,10 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    phpVersion: 80100
+    paths:
+        - src
+    level: max
+    typeAliases:
+        FakeArrayFile: 'array{filename:non-empty-string,content?:?string,time?:int,atime?:int,writeable?:bool}'
