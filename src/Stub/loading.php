@@ -41,7 +41,7 @@ function charger_fonction(string $nom, string $dossier = 'exec', bool $continue 
  * @param bool $include false ne fait que le chercher, sinon il est inclus
  *
  * @return string|null null si fichier introuvable, sinon chemin du fichier trouvé
- **/
+ */
 function include_spip(string $f, bool $include = true): ?string {
 	return '';
 }
