@@ -1,12 +1,12 @@
 <?php
 
-require_once __DIR__ . 'src/Stub/loading.php';
-require_once __DIR__ . 'src/Stub/logger.php';
-require_once __DIR__ . 'src/Stub/filesystem.php';
-require_once __DIR__ . 'src/Stub/cache.php';
-require_once __DIR__ . 'src/Stub/database.php';
-require_once __DIR__ . 'src/Stub/dbal.php';
-require_once __DIR__ . 'src/Stub/serializer.php';
-require_once __DIR__ . 'src/Stub/http.php';
-require_once __DIR__ . 'src/Stub/auth.php';
-require_once __DIR__ . 'src/Stub/acces.php';
+require_once __DIR__ . '/Stub/loading.php';
+require_once __DIR__ . '/Stub/logger.php';
+require_once __DIR__ . '/Stub/filesystem.php';
+require_once __DIR__ . '/Stub/cache.php';
+require_once __DIR__ . '/Stub/database.php';
+require_once __DIR__ . '/Stub/dbal.php';
+require_once __DIR__ . '/Stub/serializer.php';
+require_once __DIR__ . '/Stub/http.php';
+require_once __DIR__ . '/Stub/auth.php';
+require_once __DIR__ . '/Stub/acces.php';

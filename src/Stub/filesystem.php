@@ -13,7 +13,8 @@ function lire_fichier(
     string $fichier,
     string &$contenu,
     array $options = [],
-) {
+): bool {
+    return true;
 }
 
 /**

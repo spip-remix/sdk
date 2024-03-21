@@ -13,10 +13,6 @@ function lire_fichier_securise(
     $fichier,
     &$contenu,
     $options = []
-) {
-	if ($res = lire_fichier($fichier, $contenu, $options)) {
-		$contenu = substr((string) $contenu, strlen('<?php die (\'Acces interdit\'); ?>' . "\n"));
-	}
-
-	return $res;
+): bool {
+	return true;
 }
