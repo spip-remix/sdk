@@ -45,3 +45,36 @@ function charger_fonction(string $nom, string $dossier = 'exec', bool $continue 
 function include_spip(string $f, bool $include = true): ?string {
 	return '';
 }
+
+/**
+ * Recherche un fichier dans les chemins de SPIP (squelettes, plugins, core)
+ *
+ * Retournera le premier fichier trouvé (ayant la plus haute priorité donc),
+ * suivant l'ordre des chemins connus de SPIP.
+ *
+ * @api
+ * @see  charger_fonction()
+ * @uses creer_chemin() Pour la liste des chemins.
+ * @example
+ *     ```
+ *     $f = find_in_path('css/perso.css');
+ *     $f = find_in_path('perso.css', 'css');
+ *     ```
+ *
+ * @param string $file
+ *     Fichier recherché
+ * @param string $dirname
+ *     Répertoire éventuel de recherche (est aussi extrait automatiquement de $file)
+ * @param bool|string $include
+ *     - false : ne fait rien de plus
+ *     - true : inclut le fichier (include_once)
+ *     - 'require' : idem, mais tue le script avec une erreur si le fichier n'est pas trouvé.
+ * @return string|null
+ *     - string : chemin du fichier trouvé
+ *     - false : fichier introuvable
+ **/
+function find_in_path(string $file, string $dirname = '', bool|string $include = false): ?string {
+    return ' ';
+}
+
+function include_fichiers_fonctions() {}

@@ -14,3 +14,9 @@
 function _request(string $var, ?array $c = null): mixed {
 	return null;
 }
+
+function redirige_url_ecrire() {}
+
+function spip_htmlentities() {}
+
+function generer_form_ecrire() {}

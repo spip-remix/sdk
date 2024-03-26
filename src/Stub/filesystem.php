@@ -35,3 +35,10 @@ function supprimer_fichier(
 ): bool {
     return true;
 }
+
+function spip_unlink(string $filename) {}
+
+function sous_repertoire($base, $subdir = '', $nobase = false, $tantpis = false): string
+{
+    return '';
+}
