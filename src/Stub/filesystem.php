@@ -36,7 +36,12 @@ function supprimer_fichier(
     return true;
 }
 
-function spip_unlink(string $filename) {}
+/**
+ * Supprimer brutalement un fichier ou un dossier, s'il existe.
+ *
+ * @param string $filename Chemin du fichier
+ */
+function spip_unlink(string $filename): void {}
 
 function sous_repertoire($base, $subdir = '', $nobase = false, $tantpis = false): string
 {

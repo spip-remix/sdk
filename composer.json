@@ -34,10 +34,7 @@
     "autoload": {
         "psr-4": {
             "SpipRemix\\Component\\Sdk\\": "src/"
-        },
-        "files": [
-            "src/stub.php"
-        ]
+        }
     },
     "config": {
         "platform": {
