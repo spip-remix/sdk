@@ -13,3 +13,5 @@ require_once __DIR__ . '/Stub/acces.php';
 require_once __DIR__ . '/Stub/pipeline.php';
 require_once __DIR__ . '/Stub/minipres.php';
 require_once __DIR__ . '/Stub/l10n.php';
+require_once __DIR__ . '/Stub/documents.php';
+require_once __DIR__ . '/Stub/tracking.php';
